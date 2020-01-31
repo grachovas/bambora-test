@@ -1,0 +1,6 @@
+rootProject.name = 'test-task'
+
+
+include 'bambora-ui'
+include 'bambora-be'
+

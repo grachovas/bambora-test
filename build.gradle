@@ -1,0 +1,35 @@
+defaultTasks 'build'
+
+wrapper {
+    description "Regenerates the Gradle Wrapper files"
+    gradleVersion = '5.0'
+    distributionUrl = "https://services.gradle.org/distributions/gradle-${gradleVersion}-all.zip"
+}
+
+/*
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.jengelman.gradle.plugins:shadow:5.2.0'
+    }
+}
+
+apply from: file('gradle/heroku/clean.gradle')
+
+subprojects {
+    apply plugin: 'com.github.johnrengelman.shadow'
+
+    apply plugin: 'java'
+
+    group = "io.jeffchao.${rootProject.name}"
+
+    dependencies {
+
+    }
+
+    apply from: file("$rootProject.projectDir/gradle/heroku/stage.gradle")
+
+}
+*/

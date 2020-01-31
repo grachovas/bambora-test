@@ -1,0 +1,14 @@
+<div class="example-container" >
+  <form [formGroup]="myGroup">
+    Amount: <input type="number" pattern="^((\d+)|(\d{1,3})(\,\d{3}|)*)(\.\d{2}|)$" formControlName="amount">
+    Currency:
+    <select formControlName="currency" id="currency" >
+      <option *ngFor="let currency of currencies; let i = index" [value]="currencies[i].id">
+        {{currencies[i].name}}
+      </option>
+    </select>
+    <button class="pull-right" mat-raised-button color="primary" (click)="submit(myGroup.value)">
+      SUBMIT
+    </button>
+  </form>
+</div>
